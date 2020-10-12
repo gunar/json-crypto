@@ -1,5 +1,5 @@
 {
-  "main": "codec.js",
+  "main": "codec.min.js",
   "name": "json-crypto",
   "description": "Encrypt and decrypt JSON objects easily and safely",
   "keywords": ["crypto", "encrypt", "json"],
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/gunar/json-crypto.git"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "test": "jest .",
     "prepublishOnly": "terser --compress --output codec.min.js -- codec.js"
