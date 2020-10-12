@@ -1,26 +1,28 @@
-# crypto-json
+# json-crypto
 
 Easy to use abstraction on top of Node's native `crypto` module to safely encrypt and decrypt JSON objects.
 
 ## Installation
 
 ```
-npm install crypto-json
+npm install json-crypto
 ```
 
 ## Usage
 
 ```js
-const cryptoJson = require('crypto-json');
+const { createKey, createCodec } = require('json-crypto');
 
-const key = cryptoJson.createKey();
+// Create a random encryption key
+const key = createKey();
 
-const codec = cryptoJson.createCodec(key);
+// Create our codec with { encrypt, decrypt }
+const codec = createCodec(key);
 
-// encrypt
+// Encrypt a JSON object and return the ciphertext
 const ciphertext = codec.encrypt({ message: 'my secret message' })
 
-// decrypt
+// Decrypt the ciphertext back into a JSON object
 const secret = codec.decrypt(ciphertext)
 // secret === { message: 'my secret message' }
 ```
