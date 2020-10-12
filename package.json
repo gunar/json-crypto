@@ -1,0 +1,13 @@
+{
+  "main": "codec.js",
+  "test": "jest .",
+  "files": [
+    "README.md",
+    "codec.js"
+  ],
+  "devDependencies": {
+    "fast-check": "^2.4.0",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2"
+  }
+}
