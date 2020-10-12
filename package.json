@@ -10,12 +10,12 @@
     "type": "git",
     "url": "https://github.com/gunar/json-crypto.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "test": "jest .",
     "prepublishOnly": "terser --compress --output codec.min.js -- codec.js"
   },
-  "files": ["README.md", "codec.js"],
+  "files": ["README.md", "codec.min.js"],
   "devDependencies": {
     "fast-check": "^2.4.0",
     "jest": "^26.5.3",
