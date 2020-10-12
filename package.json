@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/gunar/json-crypto.git"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "test": "jest .",
     "prepublishOnly": "terser --compress --output codec.min.js -- codec.js"
