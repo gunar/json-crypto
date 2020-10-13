@@ -4,7 +4,9 @@ const fs = require("fs");
 module.exports = {createCodec, createKey };
 
 function createCodec(stringKey) {
-  assert.equal(typeof stringKey, "string");
+  if (typeof stringKey !== 'string') {
+    throw Error('Expected ciphertext to be of type: string')
+  }
 
   const key = crypto.createHash("sha256").update(stringKey).digest();
 
